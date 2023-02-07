@@ -41,7 +41,7 @@ public class BlogService {
         b.setUser(u);
         List<Blog> blist=u.getBlogs();
         blist.add(b);
-        u.setBlogs(blist);
+        u.setBlogList(blist);
         userRepository1.save(u);
         //updating the blog details
 
