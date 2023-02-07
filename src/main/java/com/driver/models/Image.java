@@ -5,6 +5,17 @@ import javax.persistence.*;
 @Entity
 @Table(name="image")
 public class Image{
+    public Image(int id, String description, String dimensions, Blog blog) {
+        this.id = id;
+        this.description = description;
+        this.dimensions = dimensions;
+        this.blog = blog;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

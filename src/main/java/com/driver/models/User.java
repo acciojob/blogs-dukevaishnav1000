@@ -7,7 +7,15 @@ import java.util.List;
 @Entity
 @Table(name="user")
 public class User{
-    public Integer getId() {
+    public User(int id, String username, String password, String firstName, String lastName) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public int getId() {
         return id;
     }
 
@@ -55,7 +63,11 @@ public class User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     private String username;
     private String password;

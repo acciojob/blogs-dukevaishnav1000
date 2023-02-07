@@ -9,9 +9,19 @@ import java.util.List;
 @Entity
 @Table(name="blog")
 public class Blog{
+    public Blog(int id, String title, String content, Date pubDate) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.pubDate = pubDate;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
 
     private String title;
 
@@ -20,7 +30,7 @@ public class Blog{
     @CreationTimestamp
     private Date pubDate;
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -80,4 +90,5 @@ public class Blog{
     public void setImageList(List<Image> imageList) {
         this.imageList = imageList;
     }
+
 }
