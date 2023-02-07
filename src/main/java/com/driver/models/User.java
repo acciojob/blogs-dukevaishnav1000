@@ -81,7 +81,7 @@ public class User{
         return blogs;
     }
 
-    public void setBlogs(List<Blog> blogs) {
+    public void setBlogList(List<Blog> blogs) {
         this.blogs = blogs;
     }
 }
