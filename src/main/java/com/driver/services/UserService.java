@@ -28,8 +28,8 @@ public class UserService {
         userRepository3.save(user);
     }
 
-    public User findByUsername(String username){
+    public User findUserByUsername(String username){
 
-        return userRepository3.findByUserName(username);
+        return userRepository3.findByUsername(username);
     }
 }
